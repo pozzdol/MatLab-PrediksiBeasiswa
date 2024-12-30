@@ -1,0 +1,46 @@
+[System]
+Name='beasiswa'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=6
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='input1'
+Range=[0.7 3.5]
+NumMFs=3
+MF1='in1mf1':'gaussmf',[0.594493371623566 0.704464013427235]
+MF2='in1mf2':'gaussmf',[0.544237894149878 2.09253565376346]
+MF3='in1mf3':'gaussmf',[0.579799342983163 3.49886322710592]
+
+[Input2]
+Name='input2'
+Range=[0.8 3.9]
+NumMFs=2
+MF1='in2mf1':'gaussmf',[1.29421854879105 0.786119023834838]
+MF2='in2mf2':'gaussmf',[1.30710250286406 3.89946225918122]
+
+[Output1]
+Name='output'
+Range=[0 1]
+NumMFs=6
+MF1='out1mf1':'linear',[0.165409245936441 -0.327043412085834 0.0816962844201488]
+MF2='out1mf2':'linear',[-0.099719649443117 0.719273841003056 0.290201632242579]
+MF3='out1mf3':'linear',[-0.504621588958724 0.318400158741598 0.0977241745952797]
+MF4='out1mf4':'linear',[0.950436268247203 -0.506710673542289 0.594527187777707]
+MF5='out1mf5':'linear',[0.543848740681121 -0.0847864142699658 0.194687955404416]
+MF6='out1mf6':'linear',[0.190440779617976 0.19926638361288 -0.516743666733105]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 2 (1) : 1
+2 1, 3 (1) : 1
+2 2, 4 (1) : 1
+3 1, 5 (1) : 1
+3 2, 6 (1) : 1
